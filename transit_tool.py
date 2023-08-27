@@ -5,8 +5,6 @@ import os
 from dotenv import load_dotenv, dotenv_values
 import requests
 import requests_cache
-import folium
-from folium.plugins import MarkerCluster
 
 load_dotenv()
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
