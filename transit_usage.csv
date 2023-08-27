@@ -1,82 +1,135 @@
 Date,Transit Agency,Location,Type,Amount
-7/20/2022 12:59:57 PM,Toronto Transit Commission,Victoria Park Ave At Pawnee Ave,Fare Payment,-$2.25
-7/20/2022 4:33:36 PM,Toronto Transit Commission,RUNNYMEDE STATION,Fare Payment,-$2.25
-7/20/2022 8:46:18 PM,Toronto Transit Commission,DUNDAS STATION,Fare Payment,-$2.25
-7/22/2022 1:10:11 PM,Toronto Transit Commission,Finch Ave East At Cherokee Blvd,Fare Payment,-$2.25
-7/25/2022 1:54:12 PM,Toronto Transit Commission,Finch Ave East At Victoria Park Ave,Fare Payment,-$2.25
-8/3/2022 1:55:20 PM,Toronto Transit Commission,Finch Ave East At Victoria Park Ave,Fare Payment,-$2.25
-8/3/2022 4:57:15 PM,Toronto Transit Commission,UNION STATION,Fare Payment,-$2.25
-8/3/2022 9:15:03 PM,Toronto Transit Commission,DUNDAS STATION,Fare Payment,-$2.25
-8/8/2022 1:54:49 PM,Toronto Transit Commission,Finch Ave East At Victoria Park Ave,Fare Payment,-$2.25
-8/8/2022 7:54:54 PM,Toronto Transit Commission,Dundas St West At Spadina Ave,Fare Payment,-$2.25
-8/12/2022 1:18:51 PM,Toronto Transit Commission,Victoria Park Ave At Pawnee Ave,Fare Payment,-$2.25
-8/12/2022 2:00:28 PM,Go Transit,Agincourt GO Station Rail,Fare Payment,-$2.64
-8/12/2022 2:28:25 PM,Go Transit,Union Station Rail,Fare Payment,-$1.98
-8/12/2022 3:50:51 PM,Toronto Transit Commission,Dundas St West At Beverley St,Fare Payment,-$2.25
-8/12/2022 6:17:46 PM,Toronto Transit Commission,DUNDAS STATION,Fare Payment,-$2.25
-8/12/2022 8:25:02 PM,Toronto Transit Commission,DUNDAS STATION,Fare Payment,-$2.25
-8/12/2022 9:41:13 PM,Go Transit,Agincourt GO Station Rail,Fare Payment,-$2.64
-8/15/2022 2:47:54 PM,Toronto Transit Commission,Victoria Park Ave At Navaho Dr,Fare Payment,-$2.25
-8/15/2022 5:39:13 PM,Toronto Transit Commission,Dundas St West At Yonge St (Dundas Station),Fare Payment,-$2.25
-8/15/2022 8:48:47 PM,Toronto Transit Commission,DUNDAS STATION,Fare Payment,-$2.25
-8/15/2022 9:01:50 PM,Go Transit,Union Station Rail,Fare Payment,-$2.64
-8/15/2022 9:40:47 PM,Go Transit,Agincourt GO Station Rail,Fare Payment,-$1.98
-8/15/2022 10:53:04 PM,Toronto Transit Commission,Victoria Park Ave At Sheppard Ave East,Fare Payment,-$2.25
-8/24/2022 1:39:58 PM,Go Transit,Agincourt GO Station Rail,Fare Payment,-$2.64
-8/24/2022 2:28:53 PM,Go Transit,Union Station Rail,Fare Payment,-$1.98
-8/24/2022 2:29:23 PM,Go Transit,Union Station Rail,Fare Payment,-$0.00
-8/24/2022 2:54:47 PM,Go Transit,Exhibition GO Station Rail,Fare Payment,-$0.00
-8/24/2022 7:35:19 PM,Toronto Transit Commission,Fleet St At Fort York Blvd East Side,Fare Payment,-$2.25
-8/24/2022 10:01:47 PM,Go Transit,Union Station Rail,Fare Payment,-$2.64
-8/24/2022 10:44:19 PM,Go Transit,Agincourt GO Station Rail,Fare Payment,-$1.98
-8/29/2022 1:28:38 PM,Toronto Transit Commission,Victoria Park Ave At Pawnee Ave,Fare Payment,-$2.25
-8/29/2022 5:20:02 PM,Toronto Transit Commission,Yonge St At Wellesley St (Wellesley Station),Fare Payment,-$2.25
-8/29/2022 8:15:40 PM,Toronto Transit Commission,Lawrence Ave East At Don Mills Rd,Fare Payment,-$2.25
-9/10/2022 1:59:22 PM,Hamilton Street Railway,STERLING at UNIVERSITY,Fare Payment,-$2.15
-9/10/2022 8:44:04 PM,Hamilton Street Railway,HAMILTON GO CENTRE PLATFORM 17,Fare Payment,-$2.15
-9/17/2022 10:00:58 PM,Hamilton Street Railway,STERLING at UNIVERSITY,Fare Payment,-$2.15
-9/23/2022 10:00:33 PM,Go Transit,Union Station Rail,Fare Payment,-$2.64
-9/23/2022 10:41:03 PM,Go Transit,Agincourt GO Station Rail,Fare Payment,-$1.98
-9/23/2022 10:47:06 PM,Toronto Transit Commission,Sheppard Ave East At Reidmount Ave - Agincourt Go Station,Fare Payment,-$2.25
-9/25/2022 7:58:07 PM,Go Transit,Mississauga - SquareOneGOBusTerminal At,Fare Payment,-$2.64
-9/25/2022 9:15:08 PM,Go Transit,Waterloo - UniversityAve At HazelSt,Fare Payment,-$7.62
-10/7/2022 7:39:33 PM,Hamilton Street Railway,KING at BAY,Fare Payment,-$2.15
-10/9/2022 6:40:24 PM,Toronto Transit Commission,UNION STATION,Fare Payment,-$2.25
-10/9/2022 9:05:23 PM,Go Transit,Union Station Rail,Fare Payment,-$2.64
-10/9/2022 9:40:18 PM,Go Transit,Agincourt GO Station Rail,Fare Payment,-$1.98
-10/9/2022 9:43:38 PM,Toronto Transit Commission,Sheppard Ave East At Reidmount Ave - Agincourt Go Station,Fare Payment,-$2.25
-10/13/2022 4:37:05 PM,Toronto Transit Commission,Kennedy Rd At Sheppard Ave East,Fare Payment,-$2.25
-10/13/2022 8:32:59 PM,Toronto Transit Commission,Dundas St West At Spadina Ave,Fare Payment,-$2.25
-10/21/2022 9:37:04 PM,Go Transit,Zone27,Fare Payment,-$2.64
-10/21/2022 11:07:31 PM,Go Transit,Miss- Erin Mills Transitway Station at,Fare Payment,-$6.57
-10/21/2022 11:09:13 PM,Go Transit,Miss- Erin Mills Transitway Station at,Fare Payment,-$0.00
-10/21/2022 11:16:03 PM,Go Transit,Miss- Erin Mills Transitway Station at,Fare Payment,-$0.00
-10/22/2022 12:05:57 AM,Go Transit,Zone20,Fare Payment,-$0.00
-10/22/2022 12:57:04 AM,Go Transit,Zone18,Fare Payment,-$3.69
-10/22/2022 5:26:35 PM,Hamilton Street Railway,STERLING at UNIVERSITY,Fare Payment,-$2.15
-10/23/2022 5:14:45 PM,Hamilton Street Railway,MAIN at EMERSON,Fare Payment,-$2.15
-11/11/2022 7:24:20 PM,Hamilton Street Railway,KING at BAY,Fare Payment,-$2.15
-11/11/2022 9:31:54 PM,Hamilton Street Railway,STERLING at UNIVERSITY,Fare Payment,-$2.15
-11/11/2022 10:17:16 PM,Go Transit,West Harbour GO Rail,Fare Payment,-$1.35
-11/12/2022 12:31:07 AM,Go Transit,Union Station Rail,Fare Payment,-$4.66
-11/12/2022 12:33:03 AM,Toronto Transit Commission,UNION STATION,Fare Payment,-$2.25
-11/25/2022 8:37:35 PM,Go Transit,Kitchener GO Station Rail,Fare Payment,-$2.64
-11/25/2022 10:30:31 PM,Go Transit,Union Station Rail,Fare Payment,-$9.00
-11/25/2022 10:58:16 PM,Go Transit,Union Station Rail,Fare Payment,-$0.00
-11/25/2022 11:41:59 PM,Go Transit,Agincourt GO Station Rail,Fare Payment,-$1.26
-11/25/2022 11:52:52 PM,Toronto Transit Commission,Sheppard Ave East At Reidmount Ave - Agincourt Go Station,Fare Payment,-$2.25
-12/2/2022 7:52:31 PM,Hamilton Street Railway,HAMILTON,Fare Payment,-$2.15
-12/3/2022 3:14:33 PM,Hamilton Street Railway,MEADOWLANDS TERMINAL PLATFORM 1,Fare Payment,-$2.15
-12/4/2022 5:12:58 PM,Hamilton Street Railway,MAIN at EMERSON,Fare Payment,-$2.15
-12/19/2022 6:55:43 PM,Go Transit,Waterloo- University of Waterloo Termi,Fare Payment,-$2.64
-12/19/2022 8:03:06 PM,Go Transit,Zone20,Fare Payment,-$7.62
-12/19/2022 9:10:45 PM,Go Transit,Mississauga - SquareOneGOBusTerminal At,Fare Payment,-$0.00
-12/19/2022 10:19:37 PM,Go Transit,Toronto- Consumers Rd At WIlliam Sylve,Fare Payment,-$2.67
-12/19/2022 10:33:45 PM,Toronto Transit Commission,Sheppard Ave East At Consumers Rd East Side,Fare Payment,-$2.25
-12/22/2022 1:48:23 PM,Toronto Transit Commission,Victoria Park Ave At Navaho Dr,Fare Payment,-$2.25
-12/22/2022 4:58:07 PM,Toronto Transit Commission,Steeles Ave East At Silver Star Blvd,Fare Payment,-$2.25
-12/22/2022 8:18:31 PM,Toronto Transit Commission,WELLESLEY STATION,Fare Payment,-$2.25
-12/22/2022 11:58:56 PM,Toronto Transit Commission,DUNDAS STATION,Fare Payment,-$2.25
-12/28/2022 3:29:15 PM,Toronto Transit Commission,Finch Ave East At Victoria Park Ave,Fare Payment,-$2.25
-12/28/2022 7:27:38 PM,Toronto Transit Commission,DUNDAS STATION,Fare Payment,-$2.25
-12/28/2022 9:50:02 PM,Toronto Transit Commission,Dundas West Station,Fare Payment,-$2.25
+1/6/2023 1:19:16 PM,Toronto Transit Commission,Victoria Park Ave At Pawnee Ave,Fare Payment,-$2.25
+1/6/2023 4:30:32 PM,Toronto Transit Commission,UNION STATION,Fare Payment,-$2.25
+1/6/2023 6:34:20 PM,Toronto Transit Commission,King St West At Shaw St,Fare Payment,-$2.25
+1/6/2023 8:43:27 PM,Toronto Transit Commission,Duplex Ave At Eglinton Ave West,Fare Payment,-$2.25
+1/13/2023 7:27:27 PM,Go Transit,Waterloo- University of Waterloo Termi,Fare Payment,-$2.64
+1/13/2023 9:14:04 PM,Go Transit,Zone20,Fare Payment,-$7.62
+1/13/2023 9:14:45 PM,Go Transit,Mississauga - SquareOneGOBusTerminal At,Fare Payment,-$0.00
+1/13/2023 10:05:58 PM,Go Transit,Hamilton - McmasterUniversityCampus At,Fare Payment,-$3.69
+1/15/2023 5:31:34 PM,Hamilton Street Railway,STERLING at UNIVERSITY,Fare Payment,-$2.15
+1/20/2023 5:37:34 PM,Go Transit,Waterloo- University of Waterloo Termi,Fare Payment,-$2.64
+1/20/2023 6:57:42 PM,Go Transit,Zone20,Fare Payment,-$7.62
+1/20/2023 7:01:45 PM,Go Transit,Mississauga - SquareOneGOBusTerminal At,Fare Payment,-$0.00
+1/20/2023 8:17:06 PM,Go Transit,Toronto- Consumers Rd At WIlliam Sylve,Fare Payment,-$2.67
+1/20/2023 8:35:20 PM,Toronto Transit Commission,0,Fare Payment,-$2.25
+1/22/2023 5:36:00 PM,Go Transit,Toronto- New USBT,Fare Payment,-$2.64
+1/22/2023 6:35:11 PM,Go Transit,Mississauga - SquareOneGOBusTerminal At,Fare Payment,-$1.89
+1/22/2023 6:47:51 PM,Go Transit,Zone20,Fare Payment,-$0.00
+1/22/2023 7:59:54 PM,Go Transit,Waterloo - UniversityAve At HazelSt,Fare Payment,-$6.90
+1/28/2023 4:18:25 PM,Hamilton Street Railway,MAIN at EMERSON,Fare Payment,-$2.15
+1/29/2023 5:33:31 PM,Hamilton Street Railway,STERLING at UNIVERSITY,Fare Payment,-$2.15
+2/3/2023 5:39:43 PM,Go Transit,Waterloo- University of Waterloo Termi,Fare Payment,-$2.64
+2/3/2023 6:46:59 PM,Go Transit,Zone20,Fare Payment,-$7.62
+2/3/2023 6:51:10 PM,Go Transit,Mississauga - SquareOneGOBusTerminal At,Fare Payment,-$0.00
+2/3/2023 7:58:09 PM,Go Transit,Hamilton - McmasterUniversityCampus At,Fare Payment,-$3.69
+2/4/2023 8:19:37 PM,Go Transit,Hamilton- Main St At Haddon Ave,Fare Payment,-$2.64
+2/4/2023 8:22:36 PM,Go Transit,Hamilton - McmasterUniversityCampus At,Fare Payment,-$0.00
+2/5/2023 5:30:00 PM,Hamilton Street Railway,GREENHILL at COCHRANE,Fare Payment,-$2.15
+2/10/2023 5:38:15 PM,Go Transit,Waterloo- University of Waterloo Termi,Fare Payment,-$2.64
+2/10/2023 6:51:58 PM,Go Transit,Zone20,Fare Payment,-$7.62
+2/10/2023 6:55:53 PM,Go Transit,Mississauga - SquareOneGOBusTerminal At,Fare Payment,-$0.00
+2/10/2023 7:54:03 PM,Go Transit,Hamilton - McmasterUniversityCampus At,Fare Payment,-$3.69
+2/10/2023 9:14:49 PM,Hamilton Street Railway,STERLING at UNIVERSITY,Fare Payment,-$2.15
+2/11/2023 6:36:32 PM,Hamilton Street Railway,MAIN at EMERSON,Fare Payment,-$2.15
+2/11/2023 7:00:38 PM,Go Transit,Zone18,Fare Payment,-$1.35
+2/11/2023 7:03:34 PM,Go Transit,Zone18,Fare Payment,$0.86
+2/12/2023 5:33:19 PM,Hamilton Street Railway,STERLING at UNIVERSITY,Fare Payment,-$2.15
+2/17/2023 7:24:17 PM,Hamilton Street Railway,KING at BAY,Fare Payment,-$2.15
+2/18/2023 12:46:49 PM,Hamilton Street Railway,MEADOWLANDS TERMINAL PLATFORM 1,Fare Payment,-$2.15
+2/18/2023 8:52:06 PM,Toronto Transit Commission,SCARBOROUGH CENTRE STATION,Fare Payment,-$2.25
+2/24/2023 3:45:07 PM,Toronto Transit Commission,Victoria Park Ave At Navaho Dr,Fare Payment,-$2.25
+2/24/2023 6:29:55 PM,Toronto Transit Commission,Dundas St West At Ossington Ave,Fare Payment,-$2.25
+2/24/2023 9:39:28 PM,Toronto Transit Commission,DUNDAS STATION,Fare Payment,-$2.25
+3/3/2023 2:48:00 PM,Go Transit,Waterloo- University of Waterloo Termi,Fare Payment,-$2.64
+3/3/2023 3:59:04 PM,Go Transit,Mississauga - SquareOneGOBusTerminal At,Fare Payment,-$7.62
+3/3/2023 4:00:44 PM,Go Transit,Mississauga - SquareOneGOBusTerminal At,Fare Payment,-$0.00
+3/3/2023 5:07:27 PM,Go Transit,Hamilton - McmasterUniversityCampus At,Fare Payment,-$3.69
+3/4/2023 3:33:04 PM,Hamilton Street Railway,MAIN opposite EMERSON,Fare Payment,-$2.15
+3/5/2023 1:22:12 PM,Hamilton Street Railway,GREENHILL at COCHRANE,Fare Payment,-$2.15
+3/5/2023 5:31:34 PM,Hamilton Street Railway,STERLING at UNIVERSITY,Fare Payment,-$2.15
+3/10/2023 5:38:16 PM,Go Transit,Waterloo- University of Waterloo Termi,Fare Payment,-$2.64
+3/10/2023 6:49:23 PM,Go Transit,Zone20,Fare Payment,-$7.62
+3/10/2023 7:45:22 PM,Go Transit,Mississauga - SquareOneGOBusTerminal At,Fare Payment,-$0.00
+3/10/2023 8:50:06 PM,Go Transit,Zone18,Fare Payment,-$3.69
+3/11/2023 5:30:29 PM,Hamilton Street Railway,STERLING at UNIVERSITY,Fare Payment,-$2.15
+3/11/2023 6:45:23 PM,Go Transit,Hamilton- Main St At Haddon Ave,Fare Payment,-$1.35
+3/11/2023 6:47:54 PM,Go Transit,Zone18,Fare Payment,$0.86
+3/17/2023 5:37:27 PM,Go Transit,Waterloo- University of Waterloo Termi,Fare Payment,-$2.64
+3/17/2023 6:48:49 PM,Go Transit,Zone20,Fare Payment,-$7.62
+3/17/2023 6:58:22 PM,Go Transit,Mississauga - SquareOneGOBusTerminal At,Fare Payment,-$0.00
+3/17/2023 8:08:55 PM,Go Transit,Toronto- Consumers Rd At WIlliam Sylve,Fare Payment,-$2.67
+3/17/2023 8:20:30 PM,Toronto Transit Commission,Don Mills Station,Fare Payment,-$2.25
+3/24/2023 5:38:51 PM,Go Transit,Waterloo- University of Waterloo Termi,Fare Payment,-$2.64
+3/24/2023 6:53:50 PM,Go Transit,Zone20,Fare Payment,-$7.62
+3/24/2023 6:56:17 PM,Go Transit,Mississauga - SquareOneGOBusTerminal At,Fare Payment,-$0.00
+3/24/2023 7:55:51 PM,Go Transit,Hamilton - McmasterUniversityCampus At,Fare Payment,-$3.69
+3/25/2023 11:42:00 AM,Hamilton Street Railway,MAIN opposite EMERSON,Fare Payment,-$2.15
+3/25/2023 9:07:14 PM,Hamilton Street Railway,STERLING at UNIVERSITY,Fare Payment,-$2.15
+3/26/2023 2:06:53 PM,Hamilton Street Railway,STERLING at FORSYTH,Fare Payment,-$2.15
+3/26/2023 5:34:53 PM,Hamilton Street Railway,STERLING at UNIVERSITY,Fare Payment,-$2.15
+4/6/2023 8:26:26 PM,Go Transit,Kitchener GO Station Rail,Fare Payment,-$2.64
+4/6/2023 10:35:49 PM,Go Transit,Union Station Rail,Fare Payment,-$9.00
+4/6/2023 11:05:27 PM,Go Transit,Union Station Rail,Fare Payment,-$0.00
+4/6/2023 11:39:13 PM,Go Transit,Agincourt GO Station Rail,Fare Payment,-$1.26
+4/6/2023 11:47:53 PM,Toronto Transit Commission,Sheppard Ave East At Reidmount Ave - Agincourt Go Station,Fare Payment,-$2.35
+4/10/2023 5:49:33 PM,Go Transit,Waterloo- University of Waterloo Termi,Fare Payment,-$2.64
+4/10/2023 8:05:02 PM,Go Transit,Hamilton - McmasterUniversityCampus At,Fare Payment,-$7.41
+4/11/2023 2:19:35 PM,Hamilton Street Railway,STERLING at UNIVERSITY,Fare Payment,-$2.15
+4/11/2023 7:28:48 PM,Hamilton Street Railway,MAIN at EMERSON,Fare Payment,-$2.15
+4/11/2023 7:52:18 PM,Go Transit,Hamilton- Main St At Haddon Ave,Fare Payment,-$1.35
+4/11/2023 7:55:15 PM,Go Transit,Hamilton - McmasterUniversityCampus At,Fare Payment,$0.86
+4/12/2023 12:59:59 PM,Hamilton Street Railway,STERLING at UNIVERSITY,Fare Payment,-$2.15
+4/12/2023 5:23:10 PM,Go Transit,Hamilton - McmasterUniversityCampus At,Fare Payment,-$2.64
+4/12/2023 7:15:14 PM,Go Transit,Waterloo- University of Waterloo Term,Fare Payment,-$7.41
+4/27/2023 3:32:13 PM,Toronto Transit Commission,Victoria Park Ave At Rowena Dr,Fare Payment,-$2.35
+4/27/2023 5:55:01 PM,Toronto Transit Commission,Spadina Ave At Nassau St,Fare Payment,-$2.35
+4/27/2023 9:08:02 PM,Toronto Transit Commission,Victoria Park Ave At Finch Ave East,Fare Payment,-$2.35
+4/28/2023 1:52:30 PM,Toronto Transit Commission,Victoria Park Ave At Pawnee Ave,Fare Payment,-$2.35
+4/28/2023 4:20:05 PM,Toronto Transit Commission,UNION STATION,Fare Payment,-$2.35
+4/28/2023 6:44:21 PM,Toronto Transit Commission,Dufferin St At College St North Side,Fare Payment,-$2.35
+5/4/2023 2:34:55 PM,Toronto Transit Commission,0,Fare Payment,-$2.35
+5/4/2023 4:50:53 PM,Toronto Transit Commission,58 Marine Parade Dr,Fare Payment,-$2.35
+5/4/2023 9:36:38 PM,Toronto Transit Commission,DUNDAS STATION,Fare Payment,-$2.35
+5/21/2023 2:36:18 PM,Toronto Transit Commission,Victoria Park Ave At Navaho Dr,Fare Payment,-$2.35
+5/21/2023 4:36:56 PM,Toronto Transit Commission,Finch Ave East At Victoria Park Ave,Fare Payment,-$2.35
+5/21/2023 7:34:06 PM,Toronto Transit Commission,St Clair Ave West At Wychwood Ave East Side,Fare Payment,-$2.35
+5/21/2023 10:13:43 PM,Toronto Transit Commission,DUNDAS STATION,Fare Payment,-$2.35
+6/3/2023 1:38:22 PM,Toronto Transit Commission,Victoria Park Ave At Navaho Dr,Fare Payment,-$2.35
+6/3/2023 9:34:58 PM,Toronto Transit Commission,SCARBOROUGH CENTRE STATION,Fare Payment,-$2.35
+6/17/2023 2:04:26 PM,Toronto Transit Commission,Victoria Park Ave At Navaho Dr,Fare Payment,-$2.35
+6/17/2023 5:03:45 PM,Toronto Transit Commission,Broadview Ave At Millbrook Cres,Fare Payment,-$2.35
+6/17/2023 9:36:36 PM,Toronto Transit Commission,DUNDAS STATION,Fare Payment,-$2.35
+6/28/2023 7:35:09 PM,Go Transit,Waterloo - UniversityAve At HazelSt,Fare Payment,-$2.64
+6/28/2023 9:02:02 PM,Go Transit,Zone20,Fare Payment,-$7.62
+6/28/2023 9:11:52 PM,Go Transit,Mississauga - SquareOneGOBusTerminal At,Fare Payment,-$0.00
+6/28/2023 10:09:51 PM,Go Transit,Toronto- Yonge St At Bishop Ave,Fare Payment,-$1.92
+6/28/2023 10:11:58 PM,Toronto Transit Commission,FINCH STATION,Fare Payment,-$2.35
+7/1/2023 1:59:49 PM,Toronto Transit Commission,Victoria Park Ave At Navaho Dr,Fare Payment,-$2.35
+7/1/2023 6:12:30 PM,Toronto Transit Commission,BATHURST STATION,Fare Payment,-$2.35
+7/1/2023 8:43:33 PM,Toronto Transit Commission,DUNDAS STATION,Fare Payment,-$2.35
+7/15/2023 2:26:48 PM,Toronto Transit Commission,Finch West Station,Fare Payment,-$2.35
+7/15/2023 4:45:38 PM,Toronto Transit Commission,Spadina Ave At King St West North Side,Fare Payment,-$2.35
+7/15/2023 7:07:45 PM,Toronto Transit Commission,Dundas St West At Spadina Ave,Fare Payment,-$2.35
+7/15/2023 9:43:09 PM,Toronto Transit Commission,Victoria Park Ave At Finch Ave East,Fare Payment,-$2.35
+7/29/2023 1:53:15 PM,Toronto Transit Commission,Victoria Park Ave At Navaho Dr,Fare Payment,-$2.35
+7/29/2023 4:03:16 PM,Toronto Transit Commission,Carlton St At Jarvis St,Fare Payment,-$2.35
+7/29/2023 9:29:06 PM,Toronto Transit Commission,DUNDAS STATION,Fare Payment,-$2.35
+8/5/2023 2:09:58 PM,Toronto Transit Commission,Victoria Park Ave Loop At Steeles Ave East,Fare Payment,-$2.35
+8/5/2023 4:38:13 PM,Toronto Transit Commission,King St West At Jarvis St West Side,Fare Payment,-$2.35
+8/5/2023 10:10:21 PM,Toronto Transit Commission,DUNDAS STATION,Fare Payment,-$2.35
+8/7/2023 7:01:04 PM,Go Transit,Zone5,Fare Payment,-$2.64
+8/7/2023 7:48:33 PM,Go Transit,Zone20,Fare Payment,-$2.64
+8/7/2023 7:55:12 PM,Go Transit,Zone20,Fare Payment,-$0.00
+8/7/2023 9:03:23 PM,Go Transit,Waterloo - UniversityAve At HazelSt,Fare Payment,-$6.90
+8/18/2023 5:53:50 PM,Go Transit,Waterloo- University of Waterloo Termi,Fare Payment,-$2.64
+8/18/2023 7:47:37 PM,Go Transit,Brampton - BramaleaGOStation At Steeles,Fare Payment,-$7.11
+8/18/2023 7:49:07 PM,Go Transit,Brampton - BramaleaGOStation At Steeles,Fare Payment,-$0.00
+8/18/2023 8:27:14 PM,Go Transit,Toronto - YorkMillsTerminal At YongeSt,Fare Payment,-$1.92
+8/19/2023 2:04:40 PM,Toronto Transit Commission,0,Fare Payment,-$2.35
+8/19/2023 4:11:15 PM,Toronto Transit Commission,Dundas St West At Spadina Ave,Fare Payment,-$2.35
+8/19/2023 9:11:12 PM,Toronto Transit Commission,DUNDAS STATION,Fare Payment,-$2.35
+8/20/2023 7:01:41 PM,Go Transit,Zone5,Fare Payment,-$2.64
+8/20/2023 7:46:03 PM,Go Transit,Zone20,Fare Payment,-$2.64
+8/20/2023 7:48:32 PM,Go Transit,Zone20,Fare Payment,-$0.00
+8/20/2023 8:59:47 PM,Go Transit,Waterloo - UniversityAve At HazelSt,Fare Payment,-$6.90
