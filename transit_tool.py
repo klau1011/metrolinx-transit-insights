@@ -9,8 +9,6 @@ import requests_cache
 load_dotenv()
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', st.secrets["GOOGLE_API_KEY"])
 
-st.write(st.secrets["GOOGLE_API_KEY"])
-st.write(st.secrets)
 BASE_QUERY_URI = f'https://maps.googleapis.com/maps/api/place/textsearch/json?key={GOOGLE_API_KEY}&query='
 requests_cache.install_cache('places_api_cache', expire_after=3600*24*365) 
 
@@ -20,7 +18,8 @@ st.set_page_config(
     page_icon="🚆'",
 
 )
-
+st.write(st.secrets["GOOGLE_API_KEY"])
+st.write(st.secrets)
 st.title('Transit Data Visualization Tool 🚆')
 st.write("""
 
