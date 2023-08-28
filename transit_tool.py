@@ -6,13 +6,16 @@ from dotenv import load_dotenv, dotenv_values
 import requests
 import requests_cache
 
+# Load .env variables
 load_dotenv()
+
+# Populate the Google API KEY
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', st.secrets["GOOGLE_API_KEY"])
 
 BASE_QUERY_URI = f'https://maps.googleapis.com/maps/api/place/textsearch/json?key={GOOGLE_API_KEY}&query='
 requests_cache.install_cache('places_api_cache', expire_after=3600*24*365) 
 
-
+# Streamlit Config and Headers
 st.set_page_config(
     page_title="Transit Data Visualization Tool",
     page_icon="🚆'",
@@ -25,8 +28,6 @@ st.write("""
 ----
 
 """)
-
-st.write(GOOGLE_API_KEY)
 
 # Turn transit stops into coordinates 
 @st.cache_data
@@ -55,6 +56,7 @@ def stop_to_coordinate(df):
     coordinate_df = pd.DataFrame(coordinate_array, columns=['latitude', 'longitude'])
     st.map(coordinate_df, size=20)
 
+# Clean raw CSV data 
 def clean_raw_data(df):   
     df = df[['Date', 'Location', 'Amount']]
     df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%Y %I:%M:%S %p')
@@ -68,18 +70,21 @@ def clean_raw_data(df):
 st.write("Enter your exported Metrolinx transit data 📖")
 
 try: 
+    # Get user CSV 
     uploaded_csv = st.file_uploader("Input your CSV file:", type="csv")
 
     if not uploaded_csv:
         uploaded_csv = 'transit_usage.csv'
 
+    # CSV to DF
     df = pd.read_csv(uploaded_csv)
 
+    # Clean df
     df = clean_raw_data(df)
 
-    # -- MOST FREQ STOPS ------
+    # -- MOST FREQ STOPS ---------
 
-    # get the most 10 popular stops
+    # get the most 7 popular stops
     location_counts = df['Location'].value_counts().nlargest(7)
 
     # plot locations
@@ -92,6 +97,7 @@ try:
     # output graph to show most freq stops
     st.plotly_chart(fig)
 
+    # Generate map plot 
     stop_to_coordinate(df)
 
     # MONTHLY TRANSIT SPENDINGS -------
