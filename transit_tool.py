@@ -10,7 +10,7 @@ import requests_cache
 load_dotenv()
 
 # Populate the Google API KEY
-GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', st.secrets["GOOGLE_API_KEY"])
+GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 
 BASE_QUERY_URI = f'https://maps.googleapis.com/maps/api/place/textsearch/json?key={GOOGLE_API_KEY}&query='
 requests_cache.install_cache('places_api_cache', expire_after=3600*24*365) 
@@ -97,6 +97,10 @@ try:
     # output graph to show most freq stops
     st.plotly_chart(fig)
 
+    # Calculate Unique Stops
+    number_unique_stops = len(df['Location'].unique())
+    st.write(f"Woah! You have visited {number_unique_stops} unique stops!")
+
     # Generate map plot 
     stop_to_coordinate(df)
 
@@ -142,6 +146,8 @@ try:
 
     # output graph to shows taps per months
     st.plotly_chart(fig2)
+
+    # ---- TODO: Add breakdown by transit agency
 
 except: 
     pass
