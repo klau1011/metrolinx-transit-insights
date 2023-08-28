@@ -25,9 +25,9 @@ st.write("""
 ----
 
 """)
-data = requests.get("'https://jsonplaceholder.typicode.com/todos/1'").json()
 
-st.write(data)
+st.write(GOOGLE_API_KEY)
+
 # Turn transit stops into coordinates 
 @st.cache_data
 def stop_to_coordinate(df):
@@ -36,16 +36,20 @@ def stop_to_coordinate(df):
     df_locations = df_locations.squeeze()
     
     for index, location in enumerate(df_locations.values):
-        url = f'{BASE_QUERY_URI}{location}'
-        data = requests.get(url).json()
+        try:
+            url = f'{BASE_QUERY_URI}{location}'
+            data = requests.get(url).json()
 
-        coordinates = data["results"][0]["geometry"]["location"]
-        latitude_longitude = (coordinates['lat'], coordinates['lng'])
+            coordinates = data["results"][0]["geometry"]["location"]
+            latitude_longitude = (coordinates['lat'], coordinates['lng'])
 
-        if coordinates['lng'] < -83 or coordinates['lat'] < 42.33:
-            continue
-      
-        coordinate_array.append(latitude_longitude)
+            if coordinates['lng'] < -83 or coordinates['lat'] < 42.33:
+                continue
+                    
+        
+            coordinate_array.append(latitude_longitude)
+        except:
+            pass
 
     # convert to df
     coordinate_df = pd.DataFrame(coordinate_array, columns=['latitude', 'longitude'])
@@ -115,7 +119,7 @@ try:
     st.plotly_chart(amountFig)
 
     num_amount_spent = df2['Amount'].sum()
-    st.write(f'💸 Amount spent in the given year: {num_amount_spent}')
+    st.write(f'💸 Amount spent in the given year: ${round(num_amount_spent,2)}')
 
 
 
