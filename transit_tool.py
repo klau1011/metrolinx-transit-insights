@@ -97,6 +97,10 @@ try:
     # output graph to show most freq stops
     st.plotly_chart(fig)
 
+    # Calculate Unique Stops
+    number_unique_stops = len(df['Location'].unique())
+    st.write(f"Woah! You have visited {number_unique_stops} unique stops!")
+
     # Generate map plot 
     stop_to_coordinate(df)
 
@@ -142,6 +146,8 @@ try:
 
     # output graph to shows taps per months
     st.plotly_chart(fig2)
+
+    # ---- TODO: Add breakdown by transit agency
 
 except: 
     pass
