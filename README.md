@@ -11,10 +11,12 @@ To get your Metrolinx CSV data:
 - Select the year and transit usage settings to your preference
 - **Export CSV**
 
-### Running the application with Docker
+### Running the locally application with Docker
 
 #### Prerequisties
 - Ensure you have Docker Desktop installed and open
+- Add your Google Maps API key to the `env.temp` file
+- Rename `env.temp` to `.env` 
 
 Steps:
 - In the root directory, run
