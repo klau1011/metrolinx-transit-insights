@@ -18,15 +18,16 @@ st.set_page_config(
     page_icon="🚆'",
 
 )
-st.write(st.secrets["GOOGLE_API_KEY"])
-st.write(st.secrets)
+
 st.title('Transit Data Visualization Tool 🚆')
 st.write("""
 
 ----
 
 """)
+data = requests.get("'https://jsonplaceholder.typicode.com/todos/1'").json()
 
+st.write(data)
 # Turn transit stops into coordinates 
 @st.cache_data
 def stop_to_coordinate(df):
