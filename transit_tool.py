@@ -71,7 +71,7 @@ st.write("Enter your exported Metrolinx transit data 📖")
 
 try: 
     # Get user CSV 
-    uploaded_csv = st.file_uploader("Input your CSV file:", type="csv")
+    uploaded_csv = st.file_uploader("CSV file:", type="csv")
 
     if not uploaded_csv:
         uploaded_csv = 'transit_usage.csv'
@@ -91,7 +91,7 @@ try:
     fig = px.bar(location_counts)
 
     # add axis titles
-    st.subheader('Most frequent stops 📊')
+    st.subheader('🚏 Most frequent stops')
     fig.update_layout(xaxis_title="Location", yaxis_title="Count", showlegend=False)
 
     # output graph to show most freq stops
@@ -122,7 +122,7 @@ try:
 
     # output graph 
     amountFig = px.bar(out)
-    st.subheader('Monthly Transit Spendings')
+    st.subheader('💸 Monthly Transit Spendings')
     amountFig.update_layout(xaxis_title="Month", yaxis_title="Amount Spent ($)", showlegend=False)
 
     # output graph to show spendings per month
@@ -141,7 +141,7 @@ try:
     df3 = df3.groupby(pd.Grouper(key='Date', freq='M'))['Amount'].count()
 
     fig2 = px.bar(df3)
-    st.subheader('Tap On/Off Frequency')
+    st.subheader('📊 Tap On/Off Frequency')
     fig2.update_layout(xaxis_title="Month", yaxis_title="Count", showlegend=False)
 
     # output graph to shows taps per months
