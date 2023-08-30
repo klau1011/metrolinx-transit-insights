@@ -15,7 +15,7 @@ To get your Metrolinx CSV data:
 
 #### Prerequisties
 - Ensure you have Docker Desktop installed and open
-- Add your Google Maps API key to the `env.temp` file
+- Add your Bing Maps API key to the `env.temp` file
 - Rename `env.temp` to `.env` 
 
 Steps:

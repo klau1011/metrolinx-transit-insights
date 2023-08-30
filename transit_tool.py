@@ -9,10 +9,10 @@ import requests_cache
 # Load .env variables
 load_dotenv()
 
-# Populate the Google API KEY
-GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY', st.secrets["GOOGLE_API_KEY"])
+# Populate the Bing API KEY
+BING_MAPS_API_KEY = os.getenv('BING_MAPS_API_KEY', st.secrets["BING_MAPS_API_KEY"])
 
-BASE_QUERY_URI = f'https://maps.googleapis.com/maps/api/place/textsearch/json?key={GOOGLE_API_KEY}&query='
+BASE_QUERY_URI = f'http://dev.virtualearth.net/REST/v1/Locations?&key={BING_MAPS_API_KEY}&maxResults=3&userLocation=43.65,-79.38&query='
 requests_cache.install_cache('places_api_cache', expire_after=3600*24*365) 
 
 # Streamlit Config and Headers
@@ -40,23 +40,43 @@ def stop_to_coordinate(df):
         try:
             url = f'{BASE_QUERY_URI}{location}'
             data = requests.get(url).json()
+            
 
-            coordinates = data["results"][0]["geometry"]["location"]
-            latitude_longitude = (coordinates['lat'], coordinates['lng'])
+            num_results = data["resourceSets"][0]["estimatedTotal"]
+            resources = data["resourceSets"][0]["resources"]
 
-            if coordinates['lng'] < -83 or coordinates['lat'] < 42.33:
-                continue
-                    
+    
+            for resource in resources:
+                province = resource["address"]["adminDistrict"]
+                country = resource["address"]["countryRegion"]
+                location_type = resource["entityType"]
+                faulty_types = ["PopulatedPlace", "AdminDivision2", "Neighborhood"]
+
+                if province != "ON" or country != "Canada" or location_type in faulty_types:
+                    continue 
+                
+                if resource["address"]["adminDistrict2"] == "Peterborough":
+                    st.write(url)
+                    st.write(location_type)
+
+                latitude_longitude = (resource["point"]["coordinates"][0], resource["point"]["coordinates"][1])
+
+                if latitude_longitude[1] < -83 or latitude_longitude[0] < 42.33:
+                    continue
+
+                break
         
             coordinate_array.append(latitude_longitude)
+
         except:
             pass
 
     # convert to df
     coordinate_df = pd.DataFrame(coordinate_array, columns=['latitude', 'longitude'])
-    st.map(coordinate_df, size=20)
+    st.map(coordinate_df, size=40)
 
 # Clean raw CSV data 
+@st.cache_data
 def clean_raw_data(df):   
     df = df[['Date', 'Location', 'Amount']]
     df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%Y %I:%M:%S %p')
@@ -65,6 +85,55 @@ def clean_raw_data(df):
     'Zone27': "University of Waterloo"})
 
     return df
+
+@st.cache_data
+def map_frequent_stops(df):
+    # get the most 7 popular stops
+    location_counts = df['Location'].value_counts().nlargest(7)
+
+    # plot locations
+    fig = px.bar(location_counts)
+
+    # add axis titles
+    st.subheader('🚏 Most frequent stops')
+    fig.update_layout(xaxis_title="Location", yaxis_title="Count", showlegend=False)
+
+    # Get number of unique stops 
+    number_unique_stops = len(df['Location'].unique())
+
+    return fig, number_unique_stops
+
+@st.cache_data
+def get_spendings_data(df):
+    df['Amount'] = df['Amount'].astype(str)
+    df['Amount'] = df['Amount'].str.replace('-', '')
+    df['Amount'] = df['Amount'].str.replace('$', '')
+    df['Amount'] = df['Amount'].astype(float)
+
+    # # date time format
+    df['Date'] = pd.to_datetime(df['Date'])
+
+    # offset by 1 mo to display correct months
+    df.Date = df.Date - pd.DateOffset(months=1)
+
+    # group by and sum each month
+    out = df.set_index('Date').groupby(pd.Grouper(freq='M'))['Amount'].sum()
+
+    num_amount_spent = df['Amount'].sum()
+
+    return out, num_amount_spent
+
+
+def get_tap_data(df):
+    df['Date'] = pd.to_datetime(df['Date'])
+        
+    unique_days_travelled = df['Date'].dt.date.nunique()
+
+    df = df.groupby(pd.Grouper(key='Date', freq='M'))['Amount'].count()
+
+    fig2 = px.bar(df)
+
+    return fig2, unique_days_travelled
 
 
 st.write("Enter your exported Metrolinx transit data 📖")
@@ -82,43 +151,27 @@ try:
     # Clean df
     df = clean_raw_data(df)
 
-    # -- MOST FREQ STOPS ---------
+    st.markdown("---")
 
-    # get the most 7 popular stops
-    location_counts = df['Location'].value_counts().nlargest(7)
+    # -- MOST FREQ STOPS --------
 
-    # plot locations
-    fig = px.bar(location_counts)
-
-    # add axis titles
-    st.subheader('🚏 Most frequent stops')
-    fig.update_layout(xaxis_title="Location", yaxis_title="Count", showlegend=False)
+    # Get fig and unqiue stop num
+    fig, number_unique_stops = map_frequent_stops(df)
 
     # output graph to show most freq stops
     st.plotly_chart(fig)
 
     # Calculate Unique Stops
-    number_unique_stops = len(df['Location'].unique())
-    st.write(f"Woah! You have visited {number_unique_stops} unique stops!")
+    st.write("Woah! You have visited ", number_unique_stops, " different stops!")
 
     # Generate map plot 
     stop_to_coordinate(df)
 
+    st.markdown("---")
+
     # MONTHLY TRANSIT SPENDINGS -------
-    df2 = df
-    df2['Amount'] = df['Amount'].astype(str)
-    df2['Amount'] = df2['Amount'].str.replace('-', '')
-    df2['Amount'] = df2['Amount'].str.replace('$', '')
-    df2['Amount'] = df2['Amount'].astype(float)
-
-    # # date time format
-    df2['Date'] = pd.to_datetime(df2['Date'])
-
-    # offset by 1 mo to display correct months
-    df2.Date = df2.Date - pd.DateOffset(months=1)
-
-    # group by and sum each month
-    out = df2.set_index('Date').groupby(pd.Grouper(freq='M'))['Amount'].sum()
+    
+    out, num_amount_spent = get_spendings_data(df)
 
     # output graph 
     amountFig = px.bar(out)
@@ -128,24 +181,20 @@ try:
     # output graph to show spendings per month
     st.plotly_chart(amountFig)
 
-    num_amount_spent = df2['Amount'].sum()
-    st.write(f'💸 Amount spent in the given year: ${round(num_amount_spent,2)}')
+    st.write('💸 Amount spent in the given year: $', round(num_amount_spent,2))
 
-
+    st.markdown("---")
 
     # TAP ON/OFF COUNT PER MONTH  -----------
-    df3 = df
-
-    df3['Date'] = pd.to_datetime(df3['Date'])
-
-    df3 = df3.groupby(pd.Grouper(key='Date', freq='M'))['Amount'].count()
-
-    fig2 = px.bar(df3)
+   
+    fig2, unique_days_travelled = get_tap_data(df)
     st.subheader('📊 Tap On/Off Frequency')
     fig2.update_layout(xaxis_title="Month", yaxis_title="Count", showlegend=False)
 
     # output graph to shows taps per months
     st.plotly_chart(fig2)
+
+    st.write('You took Metrolinx on', unique_days_travelled, ' days! Keep it going!')
 
     # ---- TODO: Add breakdown by transit agency
 
