@@ -10,7 +10,7 @@ import requests_cache
 load_dotenv()
 
 # Populate the Bing API KEY
-BING_MAPS_API_KEY = os.getenv('BING_MAPS_API_KEY')
+BING_MAPS_API_KEY = os.getenv('BING_MAPS_API_KEY', st.secrets["BING_MAPS_API_KEY"])
 
 BASE_QUERY_URI = f'http://dev.virtualearth.net/REST/v1/Locations?&key={BING_MAPS_API_KEY}&maxResults=3&userLocation=43.65,-79.38&query='
 requests_cache.install_cache('places_api_cache', expire_after=3600*24*365) 
