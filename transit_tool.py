@@ -18,8 +18,7 @@ requests_cache.install_cache("places_api_cache", expire_after=3600 * 24 * 365)
 
 # Streamlit Config and Headers
 st.set_page_config(
-    page_title="Transit Data Visualization Tool",
-    page_icon="🚆'",
+    page_title="Transit Data Visualization Tool", page_icon="🚆'",
 )
 
 st.title("Transit Data Visualization Tool 🚆")
@@ -132,6 +131,7 @@ def get_spendings_data(df):
     return out, num_amount_spent
 
 
+@st.cache_data
 def get_tap_data(df):
     df["Date"] = pd.to_datetime(df["Date"])
 
@@ -216,7 +216,16 @@ try:
 
     st.write("You took Metrolinx on", unique_days_travelled, " days! Keep it going!")
 
-    # ---- TODO: Add breakdown by transit agency
+    # AMOUNT SPENT PER TRANSIT AGENCY ---
+    df3 = df.groupby("Transit Agency")["Amount"].agg("sum")
+
+    agencyFig = px.bar(df3)
+    agencyFig.update_layout(
+        xaxis_title="Transit Agency", yaxis_title="Amount ($)", showlegend=False
+    )
+    st.subheader("📊 Amount Spent per Transit Agency")
+
+    st.plotly_chart(agencyFig)
 
 except:
     pass
