@@ -79,7 +79,7 @@ def stop_to_coordinate(df):
 # Clean raw CSV data
 @st.cache_data
 def clean_raw_data(df):
-    df = df[["Date", "Location", "Amount"]]
+    df = df[["Date", "Location", "Amount", "Transit Agency"]]
     df["Date"] = pd.to_datetime(df["Date"], format="%m/%d/%Y %I:%M:%S %p")
     df = df.replace(
         {
@@ -158,6 +158,7 @@ try:
 
     # Clean df
     df = clean_raw_data(df)
+    
 
     st.markdown("---")
 
@@ -216,16 +217,23 @@ try:
 
     st.write("You took Metrolinx on", unique_days_travelled, " days! Keep it going!")
 
+    st.subheader("📊 Amount Spent per Transit Agency")
+
+    
     # AMOUNT SPENT PER TRANSIT AGENCY ---
+    df["Amount"] = df["Amount"].astype(str)
+    df["Amount"] = df["Amount"].str.replace("-", "")
+    df["Amount"] = df["Amount"].str.replace("$", "")
+    df["Amount"] = df["Amount"].astype(float)
+
     df3 = df.groupby("Transit Agency")["Amount"].agg("sum")
 
     agencyFig = px.bar(df3)
     agencyFig.update_layout(
         xaxis_title="Transit Agency", yaxis_title="Amount ($)", showlegend=False
     )
-    st.subheader("📊 Amount Spent per Transit Agency")
 
     st.plotly_chart(agencyFig)
 
-except:
-    pass
+except Exception as e:
+    st.error(f"An error occurred: {e}")
