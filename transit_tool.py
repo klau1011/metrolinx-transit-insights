@@ -152,6 +152,7 @@ try:
     st.write("You took Metrolinx on", unique_days_travelled, " days! Keep it going!")
 
     st.subheader("📊 Amount Spent per Transit Agency")
+    df["Amount"] = df["Amount"].astype(str)
     df["Amount"] = df["Amount"].str.replace("-", "").str.replace("$", "").astype(float)
     df3 = df.groupby("Transit Agency")["Amount"].agg("sum")
     agencyFig = px.bar(df3)
